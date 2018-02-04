@@ -1,0 +1,70 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "app",
+  "scripts": {
+    "init-cloud-code": "cd CloudCode && b4a new -i",
+    "lint": "eslint .",
+    "build": "babel-node tools/build",
+    "deploy-without-build": "cd CloudCode && b4a deploy",
+    "deploy": "npm run build && npm run deploy-without-build",
+    "start": "babel-node tools/start"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.14.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.39",
+    "@babel/node": "^7.0.0-beta.39",
+    "@babel/preset-env": "^7.0.0-beta.39",
+    "@babel/preset-stage-0": "^7.0.0-beta.39",
+    "babel-eslint": "^8.2.1",
+    "babel-loader": "^8.0.0-beta.0",
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "prettier": "^1.10.2",
+    "webpack": "^3.10.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "4.5.0"
+          }
+        }
+      ],
+      "@babel/preset-stage-0"
+    ]
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": [
+      "airbnb/base"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": "error",
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "packageDir": "."
+        }
+      ]
+    }
+  },
+  "eslintIgnore": [
+    "/CloudCode/"
+  ],
+  "prettier": {
+    "printWidth": 80,
+    "singleQuote": true,
+    "trailingComma": "all"
+  }
+}

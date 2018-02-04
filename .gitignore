@@ -57,3 +57,5 @@ typings/
 # dotenv environment variables file
 .env
 
+# Back4App Deploy
+/CloudCode/
