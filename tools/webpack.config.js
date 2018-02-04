@@ -1,3 +1,6 @@
+import nodeExternals from 'webpack-node-externals';
+import pkg from '../package.json';
+
 export default {
   entry: './src/app.js',
   output: {
@@ -15,4 +18,7 @@ export default {
       },
     ],
   },
+  externals: [
+    nodeExternals({ nodeModules: Object.keys(pkg.optionalDependencies) }),
+  ],
 };

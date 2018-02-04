@@ -11,9 +11,6 @@
     "start": "babel-node tools/start"
   },
   "license": "MIT",
-  "dependencies": {
-    "express": "4.14.0"
-  },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.39",
     "@babel/node": "^7.0.0-beta.39",
@@ -26,7 +23,36 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-prettier": "^2.6.0",
     "prettier": "^1.10.2",
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "webpack-node-externals": "git+https://github.com/dplusic/webpack-node-externals.git#0864d8c2309ac065e94a48bd57cf4e775fbd09f6"
+  },
+  "optionalDependencies": {
+    "aws-sdk": "2.6.15",
+    "body-parser": "1.15.2",
+    "braintree": "1.42.0",
+    "cookie-parser": "1.4.3",
+    "crypto-js": "3.1.8",
+    "ejs": "2.5.2",
+    "express": "4.14.0",
+    "jsonwebtoken": "7.1.9",
+    "mailgun-js": "0.7.13",
+    "mandrill-api": "1.0.45",
+    "mercadopago": "0.5.0",
+    "method-override": "2.3.7",
+    "moment": "2.15.2",
+    "numeral": "1.5.3",
+    "parse-express-cookie-session": "0.0.3",
+    "parse-express-https-redirect": "0.0.1",
+    "parse-image": "0.2.0",
+    "parse-server": "2.6.5",
+    "plivo": "0.4.0",
+    "pug": "2.0.0-beta6",
+    "pusher": "1.5.0",
+    "sendgrid": "4.7.1",
+    "stripe": "4.12.0",
+    "twilio": "2.11.0",
+    "underscore": "1.8.3",
+    "xlsx": "0.8.0"
   },
   "babel": {
     "presets": [
