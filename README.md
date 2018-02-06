@@ -6,10 +6,9 @@ Boilerplate for back4app cloud code with babel and webpack
 * webpack
 * eslint (airbnb/base, prettier)
 
-## Prerequisite
+## Getting Started
 1. [Install Back4App Cli](https://docs.back4app.com/docs/integrations/command-line-interface/setting-up-cloud-code/)
 1. [Configure Back4App Account Keys](https://docs.back4app.com/docs/integrations/command-line-interface/account-keys/)
-
-## Getting Started
-1. npm run init-cloud-code
-1. npm run build && npm run deploy
+1. `npm run init-cloud-code`
+1. `npm run build`
+1. `npm run deploy`
