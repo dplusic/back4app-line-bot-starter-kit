@@ -6,8 +6,7 @@
     "init-cloud-code": "cd CloudCode && b4a new -i",
     "lint": "eslint .",
     "build": "babel-node tools/build",
-    "deploy-without-build": "cd CloudCode && b4a deploy",
-    "deploy": "npm run build && npm run deploy-without-build",
+    "deploy": "cd CloudCode && b4a deploy",
     "start": "babel-node tools/start"
   },
   "license": "MIT",

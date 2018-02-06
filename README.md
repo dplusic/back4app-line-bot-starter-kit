@@ -12,4 +12,4 @@ Boilerplate for back4app cloud code with babel and webpack
 
 ## Getting Started
 1. npm run init-cloud-code
-1. npm run deploy
+1. npm run build && npm run deploy
