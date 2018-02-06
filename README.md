@@ -12,3 +12,9 @@ Boilerplate for back4app cloud code with babel and webpack
 1. `npm run init-cloud-code`
 1. `npm run build`
 1. `npm run deploy`
+
+## Remarks
+
+### About `optionalDependencies` in `package.json`
+* These dependencies are provided by "Parse Server 2.6.5", so will not be packed.
+* `ejs@2.5.2` is excluded because of its vulnerabilities([1](https://nvd.nist.gov/vuln/detail/CVE-2017-1000228), [2](https://nvd.nist.gov/vuln/detail/CVE-2017-1000188)).
