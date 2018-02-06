@@ -7,9 +7,16 @@ Boilerplate for back4app cloud code with babel and webpack
 * eslint (airbnb/base, prettier)
 
 ## Getting Started
+
 1. [Install Back4App Cli](https://docs.back4app.com/docs/integrations/command-line-interface/setting-up-cloud-code/)
 1. [Configure Back4App Account Keys](https://docs.back4app.com/docs/integrations/command-line-interface/account-keys/)
 1. `npm run init-cloud-code`
+1. Set `PARSE_SERVER_DATABASE_URI` as an environment variable
+    * Get the URI from: Back4App > Server Settings > Core Settings
+    * or, your local MongoDB
+1. `npm start`
+
+### Deploy
 1. `npm run build`
 1. `npm run deploy`
 
