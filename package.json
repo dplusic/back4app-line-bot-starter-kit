@@ -10,9 +10,13 @@
     "start": "babel-node tools/start"
   },
   "license": "MIT",
+  "dependencies": {
+    "@babel/runtime": "^7.0.0-beta.39"
+  },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.39",
     "@babel/node": "^7.0.0-beta.39",
+    "@babel/plugin-transform-runtime": "^7.0.0-beta.39",
     "@babel/preset-env": "^7.0.0-beta.39",
     "@babel/preset-stage-0": "^7.0.0-beta.39",
     "babel-eslint": "^8.2.1",
@@ -72,6 +76,9 @@
         }
       ],
       "@babel/preset-stage-0"
+    ],
+    "plugins": [
+      "@babel/plugin-transform-runtime"
     ]
   },
   "eslintConfig": {
