@@ -1,5 +1,5 @@
-# back4app-express-starter-kit
-Starter kit for back4app express web hosting with babel and webpack
+# back4app-line-bot-starter-kit
+Starter kit for line bot on back4app
 
 ## Features
 * babel (7.0.0-beta, preset-stage-0)
