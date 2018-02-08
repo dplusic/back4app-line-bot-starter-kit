@@ -5,9 +5,9 @@
   "scripts": {
     "init-cloud-code": "cd CloudCode && b4a new -i",
     "lint": "eslint .",
-    "build": "babel-node tools/build",
+    "build": "babel-node tools/run build",
     "deploy": "cd CloudCode && b4a deploy",
-    "start": "babel-node tools/start"
+    "start": "babel-node tools/run start"
   },
   "license": "MIT",
   "dependencies": {
@@ -27,6 +27,7 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-prettier": "^2.6.0",
     "prettier": "^1.10.2",
+    "rimraf": "^2.6.2",
     "webpack": "^3.10.0",
     "webpack-node-externals": "git+https://github.com/dplusic/webpack-node-externals.git#0864d8c2309ac065e94a48bd57cf4e775fbd09f6"
   },

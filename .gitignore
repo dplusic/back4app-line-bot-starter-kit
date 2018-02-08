@@ -60,5 +60,8 @@ typings/
 # IDE or editor files
 .vscode/
 
+# Build results for hot module reloading
+/tools/start/build/
+
 # Back4App Deploy
 /CloudCode/

@@ -3,7 +3,7 @@ Boilerplate for back4app cloud code with babel and webpack
 
 ## Features
 * babel (7.0.0-beta, preset-stage-0)
-* webpack
+* webpack (HMR)
 * eslint (airbnb/base, prettier)
 
 ## Getting Started
