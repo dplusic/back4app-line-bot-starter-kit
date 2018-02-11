@@ -5,10 +5,10 @@ import {
   middleware as lineBotMiddleware,
 } from '@line/bot-sdk';
 import bodyParser from 'body-parser';
-import createHandler from './handler';
+import createHandlers from './handlers';
 
 let lineBotMiddlewareFunc;
-let handleEvent;
+let handlers;
 
 const initPromise = (async () => {
   try {
@@ -41,7 +41,7 @@ const initPromise = (async () => {
     lineBotMiddlewareFunc = __DEV__
       ? bodyParser.json()
       : lineBotMiddleware(config);
-    handleEvent = createHandler(client);
+    handlers = createHandlers(client);
   } catch (e) {
     console.error(e);
   }
@@ -59,7 +59,7 @@ app.post(
     lineBotMiddlewareFunc(req, res, next);
   },
   (req, res) => {
-    Promise.all(req.body.events.map(handleEvent))
+    Promise.all(req.body.events.map(handlers.event))
       .then(result => res.json(result))
       .catch(err => {
         console.error(err?.originalError?.response?.data);

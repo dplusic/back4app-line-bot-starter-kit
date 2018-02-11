@@ -1,6 +1,6 @@
-export default client =>
+export default client => ({
   // event handler
-  function handleEvent(event) {
+  event: event => {
     if (event.type !== 'message' || event.message.type !== 'text') {
       // ignore non-text-message event
       return Promise.resolve(null);
@@ -11,4 +11,5 @@ export default client =>
 
     // use reply API
     return client.replyMessage(event.replyToken, echo);
-  };
+  },
+});
