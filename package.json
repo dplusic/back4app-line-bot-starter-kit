@@ -99,6 +99,9 @@
           "packageDir": "."
         }
       ]
+    },
+    "globals": {
+      "__DEV__": true
     }
   },
   "eslintIgnore": [
