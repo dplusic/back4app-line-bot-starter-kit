@@ -25,6 +25,9 @@ Starter kit for line bot on back4app
 
 ## Remarks
 
+### Verifying Webhook URL
+* When you veriy a webhook url in the LINE Developers Console, it will fail because it sends events with invalid reply tokens. You can ignore the step. Webhook works well without verifying.
+
 ### About `optionalDependencies` in `package.json`
 * These dependencies are provided by "Parse Server 2.6.5", so will not be packed.
 * `ejs@2.5.2` is excluded because of its vulnerabilities([1](https://nvd.nist.gov/vuln/detail/CVE-2017-1000228), [2](https://nvd.nist.gov/vuln/detail/CVE-2017-1000188)).
