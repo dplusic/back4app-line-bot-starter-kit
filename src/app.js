@@ -4,6 +4,7 @@ import {
   Client as LineBotClient,
   middleware as lineBotMiddleware,
 } from '@line/bot-sdk';
+import bodyParser from 'body-parser';
 import createHandler from './handler';
 
 let lineBotMiddlewareFunc;
@@ -31,7 +32,9 @@ const initPromise = (async () => {
     // create LINE SDK client
     const client = new LineBotClient(config);
 
-    lineBotMiddlewareFunc = lineBotMiddleware(config);
+    lineBotMiddlewareFunc = __DEV__
+      ? bodyParser.json()
+      : lineBotMiddleware(config);
     handleEvent = createHandler(client);
   } catch (e) {
     console.error(e);
