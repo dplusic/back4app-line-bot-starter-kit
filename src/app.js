@@ -32,6 +32,12 @@ const initPromise = (async () => {
     // create LINE SDK client
     const client = new LineBotClient(config);
 
+    if (__DEV__) {
+      client.replyMessage = async (replyToken, message) => {
+        console.log('replyMessage', replyToken, message);
+      };
+    }
+
     lineBotMiddlewareFunc = __DEV__
       ? bodyParser.json()
       : lineBotMiddleware(config);
