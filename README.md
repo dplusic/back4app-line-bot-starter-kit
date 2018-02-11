@@ -11,6 +11,9 @@ Starter kit for line bot on back4app
 1. [Install Back4App Cli](https://docs.back4app.com/docs/integrations/command-line-interface/setting-up-cloud-code/)
 1. [Configure Back4App Account Keys](https://docs.back4app.com/docs/integrations/command-line-interface/account-keys/)
 1. `npm run init-cloud-code`
+1. Configure Parameters
+    1. Back4App > Dashboard > Core > Config > Create a parameter
+    1. Add `LINE_BOT_CHANNEL_ACCESS_TOKEN`, `LINE_BOT_CHANNEL_SECRET` as a String type
 1. Set `PARSE_SERVER_DATABASE_URI` as an environment variable
     * Get the URI from: Back4App > Server Settings > Core Settings
     * or, your local MongoDB
