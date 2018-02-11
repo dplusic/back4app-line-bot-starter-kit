@@ -4,7 +4,7 @@
   "description": "app",
   "scripts": {
     "init-cloud-code": "cd CloudCode && b4a new -i",
-    "lint": "eslint .",
+    "lint": "eslint --ignore-path .gitignore .",
     "build": "babel-node tools/run build",
     "deploy": "cd CloudCode && b4a deploy",
     "start": "babel-node tools/run start"
@@ -104,9 +104,6 @@
       "__DEV__": true
     }
   },
-  "eslintIgnore": [
-    "/CloudCode/"
-  ],
   "prettier": {
     "printWidth": 80,
     "singleQuote": true,
