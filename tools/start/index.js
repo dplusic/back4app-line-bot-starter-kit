@@ -21,6 +21,11 @@ export default async () => {
     new webpack.NoEmitOnErrorsPlugin(),
   );
 
+  const { definitions } = webpackConfig.plugins.find(
+    x => x instanceof webpack.DefinePlugin,
+  );
+  definitions.__DEV__ = true; // eslint-disable-line no-underscore-dangle
+
   let lastHash;
 
   webpack(webpackConfig).watch({}, (err, stats) => {

@@ -1,4 +1,5 @@
 import path from 'path';
+import webpack from 'webpack';
 import nodeExternals from 'webpack-node-externals';
 import pkg from '../package.json';
 
@@ -28,5 +29,9 @@ export default {
     cachedAssets: false,
     colors: true,
   },
-  plugins: [],
+  plugins: [
+    new webpack.DefinePlugin({
+      __DEV__: false,
+    }),
+  ],
 };
