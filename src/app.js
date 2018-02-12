@@ -7,15 +7,24 @@ import {
 import bodyParser from 'body-parser';
 import createHandlers from './handlers';
 
+const { Parse } = global;
+
 let lineBotMiddlewareFunc;
 let handlers;
 
+const initDatabase = async database => {
+  const schema = await database.loadSchema();
+
+  await schema.enforceClassExists('LineBotUser');
+};
+
 const initPromise = (async () => {
   try {
-    const { Parse } = global;
     const { database } = ParseServerConfig.get(
       Parse.CoreManager.get('APPLICATION_ID'),
     );
+    await initDatabase(database);
+
     const globalConfigs = await database.find(
       '_GlobalConfig',
       { objectId: '1' },
@@ -41,7 +50,7 @@ const initPromise = (async () => {
     lineBotMiddlewareFunc = __DEV__
       ? bodyParser.json()
       : lineBotMiddleware(config);
-    handlers = createHandlers(client);
+    handlers = createHandlers({ database, client });
   } catch (e) {
     console.error(e);
   }
@@ -68,3 +77,14 @@ app.post(
       });
   },
 );
+
+Parse.Cloud.define('push', async (req, res) => {
+  await initPromise;
+  try {
+    res.success(await handlers.push(req.params));
+  } catch (err) {
+    console.error(err?.originalError?.response?.data);
+    console.error(err);
+    res.error();
+  }
+});
