@@ -1,6 +1,8 @@
 # back4app-line-bot-starter-kit
 Starter kit for line bot on back4app
 
+Based on [back4app-express-starter-kit](https://github.com/dplusic/back4app-express-starter-kit)
+
 ## Features
 * babel (7.0.0-beta, preset-stage-0)
 * webpack (HMR)
