@@ -59,6 +59,7 @@ typings/
 
 # IDE or editor files
 .vscode/
+.idea/
 
 # Build results for hot module reloading
 /tools/start/build/
