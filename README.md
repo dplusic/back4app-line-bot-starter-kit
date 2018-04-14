@@ -25,3 +25,4 @@ Starter kit for back4app express web hosting with babel and webpack
 ### About `optionalDependencies` in `package.json`
 * These dependencies are provided by "Parse Server 2.6.5", so will not be packed.
 * `ejs@2.5.2` is excluded because of its vulnerabilities([1](https://nvd.nist.gov/vuln/detail/CVE-2017-1000228), [2](https://nvd.nist.gov/vuln/detail/CVE-2017-1000188)).
+* `moment@2.15.2` and its reference `jsonwebtoken@7.1.9` are excluded because of its vulnerability([1](https://nvd.nist.gov/vuln/detail/CVE-2017-18214)).
